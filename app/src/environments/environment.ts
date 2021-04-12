@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  mockupEnabled: true,
+  config: {
+    dbName: '__bird',
+  },
+
+  keys:{
+    myComments: 'MY_COMMENTS_KEY',
+  }
 };
 
 /*

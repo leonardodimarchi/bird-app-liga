@@ -1,6 +1,7 @@
 /* #region  Imports */
-import { Component } from '@angular/core';
-import { CommentProxy, getFakeCommentProxy } from 'src/app/models/proxies/comment.proxy';
+import { Component, OnInit } from '@angular/core';
+import { CommentProxy } from 'src/app/models/proxies/comment.proxy';
+import { CommentService } from 'src/app/services/comment/comment.service';
 /* #endregion */
 
 /* 
@@ -11,14 +12,22 @@ import { CommentProxy, getFakeCommentProxy } from 'src/app/models/proxies/commen
   templateUrl: './my-comments.page.html',
   styleUrls: ['./my-comments.page.scss'],
 })
-export class MyCommentsPage {
+export class MyCommentsPage implements OnInit {
 
   /* #region  Constructor */
   /* 
     Construtor padrão
   */
-  constructor() { }
+  constructor(
+    private readonly comment: CommentService,
+  ) { }
 
+  /* #endregion */
+
+  /* #region  OnInit Events */
+  public async ngOnInit(): Promise<void> {
+    this.listComments = await this.comment.getMyComments();
+  }
   /* #endregion */
 
   /* #region  Public Properties */
@@ -26,14 +35,7 @@ export class MyCommentsPage {
     Lista de comentarios do proprio usuario
   */
 
-  public listComments: CommentProxy[] = [
-    getFakeCommentProxy(),
-    getFakeCommentProxy(),
-    getFakeCommentProxy(),
-    getFakeCommentProxy(),
-    getFakeCommentProxy(),
-    getFakeCommentProxy(),
-  ];
+  public listComments: CommentProxy[] = [];
 
   /* #endregion */
 
