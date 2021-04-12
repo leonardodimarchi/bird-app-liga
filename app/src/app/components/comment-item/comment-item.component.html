@@ -1,0 +1,23 @@
+<div class="comment">
+  <div class="comment-header">
+    <div class="comment-header-avatar"
+      [style.background-color]="content.personColor">
+      <span>{{ content.personEmoji }}</span>
+    </div>
+
+    <div class="comment-header-author">
+      <h2 class="bird-nowrap">{{ content.personName }}</h2>
+      <time>{{ content.createdAt | date: format:"dd MMMM 'as' HH:mm"}}</time>
+    </div>
+  </div>
+
+  <div class="comment-body">
+    <p>
+      {{ content.message }}
+    </p>
+
+    <ng-container *ngIf="content.category">
+      <span class="bird-nowrap">#{{ content.category.name }}</span>
+    </ng-container>
+  </div>
+</div>
