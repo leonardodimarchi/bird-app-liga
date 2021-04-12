@@ -22,5 +22,4 @@ export class MainPage {
 
    public footerState: typeof FooterState = FooterState;
 
-
 }
