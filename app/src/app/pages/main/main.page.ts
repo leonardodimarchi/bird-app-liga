@@ -1,6 +1,8 @@
+/* #region  Imports */
 import { Component } from '@angular/core';
 import { FooterState } from 'src/app/models/enums/footer-state';
 import { FooterService } from 'src/app/services/footer/footer.service';
+/* #endregion */
 
 // Classe inicial do projeto
 @Component({
@@ -13,13 +15,13 @@ export class MainPage {
   constructor(
     private readonly footerService: FooterService,
   ) {
-    this.footerService.getCurrentSelectedFooter$().subscribe(footerState=>{
+    this.footerService.getCurrentSelectedFooter$().subscribe(footerState => {
       this.currentSelectedFooter = footerState;
     })
-   }
+  }
 
-   public currentSelectedFooter: FooterState = FooterState.CATEGORIES;
+  public currentSelectedFooter: FooterState = FooterState.CATEGORIES;
 
-   public footerState: typeof FooterState = FooterState;
+  public footerState: typeof FooterState = FooterState;
 
 }
