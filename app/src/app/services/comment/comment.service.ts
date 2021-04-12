@@ -1,6 +1,6 @@
 /* #region  Imports */
 import { Injectable } from '@angular/core';
-import { CommentInteractor } from 'src/app/interactors/interactor/comment/comment.interactor';
+import { CommentInteractor } from 'src/app/interactors/comment/comment.interactor';
 import { CommentProxy } from '../../models/proxies/comment.proxy'
 /* #endregion */
 
