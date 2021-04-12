@@ -74,6 +74,11 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  --bird-primary: #3DD598;
+  --bird-dark: #30444E;
+  --bird-darker: #1F2E35;
+  --bird-dark-contrast: #96A7AF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -197,7 +202,8 @@
    */
 
   .md body {
-    --ion-background-color: #121212;
+    // --ion-background-color: #121212;
+    --ion-background-color: #727272;
     --ion-background-color-rgb: 18,18,18;
 
     --ion-text-color: #ffffff;
