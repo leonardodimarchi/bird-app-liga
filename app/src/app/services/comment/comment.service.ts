@@ -1,6 +1,7 @@
 /* #region  Imports */
 import { Injectable } from '@angular/core';
 import { CommentInteractor } from 'src/app/interactors/comment/comment.interactor';
+import { PaginatedCommentProxy } from 'src/app/models/interfaces/paginated-comment.proxy';
 import { CommentProxy } from '../../models/proxies/comment.proxy'
 /* #endregion */
 
@@ -29,16 +30,17 @@ export class CommentService {
     return success;
   }
 
-  public async getAllComments(): Promise<CommentProxy[]>{
-    const { error, success } = await this.interactor.getAllComments();
+  public async getAllComments(currentPage: number, maxItens: number): Promise<PaginatedCommentProxy>{
+    const { error, success } = await this.interactor.getAllComments(currentPage, maxItens);
     if(error){
-      return [];
+      return {
+        pageCount: 1,
+        currentPage: 1,
+        items: [],
+        maxItens,
+      };
     }
-
-    if(!Array.isArray(success)){
-      return [];
-    }
-
+    
     return success;
   }
 

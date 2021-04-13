@@ -2,10 +2,12 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Storage } from "@ionic/storage-angular";
-import { CommentProxy, getFakeCommentProxy } from "src/app/models/proxies/comment.proxy";
+import { CommentProxy } from "src/app/models/proxies/comment.proxy";
 import { StorageAsyncResult } from "src/app/models/interfaces/storage-async-results";
 import { environment } from "src/environments/environment";
-import { getCommentsMockup } from "./comment.mockup";
+import { getAllCommentsMockup, getCommentsMockup } from "./comment.mockup";
+import { PaginatedCommentProxy } from "src/app/models/interfaces/paginated-comment.proxy";
+import { HttpAsyncResult } from "src/app/models/interfaces/http-async-result";
 /* #endregion */
 
 /**
@@ -31,14 +33,19 @@ export class CommentInteractor {
             .catch(() => ({success: undefined, error:'Ocorreu um erro ao buscar do cache'}));
     }
     
-    public async getAllComments(): Promise<StorageAsyncResult<CommentProxy[]>> {
+    public async getAllComments(currentPage: number, maxItens: number): Promise<HttpAsyncResult<PaginatedCommentProxy>> {
         if(environment.mockupEnabled){
-            return await getCommentsMockup();
+            return await getAllCommentsMockup(currentPage, maxItens);
         }
 
-        return this.storage.get(environment.keys.allComments)
-            .then(success => ({success, error: undefined}))
-            .catch(() => ({success: undefined, error:'Ocorreu um erro ao buscar do cache'}));
+        const url = environment.api.comment.list
+            .replace('{currentPage}', currentPage.toString())
+            .replace('{maxItens}', maxItens.toString());
+
+        return await this.http.get<PaginatedCommentProxy>(url)
+            .toPromise()
+            .then(success =>({success, error: undefined}))
+            .catch(error =>({success: undefined, error}))
     }
 
     /* #endregion */

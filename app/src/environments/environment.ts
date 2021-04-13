@@ -4,15 +4,21 @@
 
 export const environment = {
   production: false,
-  mockupEnabled: false,
+  mockupEnabled: true,
   config: {
     dbName: '__bird',
   },
 
   keys:{
     myComments: 'MY_COMMENTS_KEY',
-    allComments: 'ALL_COMMENTS_KEY',
-  }
+  },
+
+  api: {
+    baseUrl: 'http://localhost:3000',
+    comment: {
+      list: '/comments?page={currentPage}&maxItens={maxItens}',
+    },
+  },
 };
 
 /*

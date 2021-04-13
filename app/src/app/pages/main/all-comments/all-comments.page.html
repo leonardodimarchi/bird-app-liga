@@ -1,4 +1,4 @@
-<div class="comments">
+<div class="comments" (scroll)="onScroll($event)">
     <!-- Tag de auxilio para colocar diretivas -->
     <ng-container *ngFor="let comment of listAllComments; trackBy: trackById">
         <bird-comment-item [content]="comment"></bird-comment-item>

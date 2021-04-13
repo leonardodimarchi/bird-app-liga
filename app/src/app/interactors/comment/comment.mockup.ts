@@ -1,4 +1,6 @@
 /* #region  Imports */
+import { HttpAsyncResult } from "src/app/models/interfaces/http-async-result";
+import { PaginatedCommentProxy } from "src/app/models/interfaces/paginated-comment.proxy";
 import { StorageAsyncResult } from "src/app/models/interfaces/storage-async-results"
 import { CommentProxy, getFakeCommentProxy } from "src/app/models/proxies/comment.proxy"
 /* #endregion */
@@ -16,3 +18,20 @@ export async function getCommentsMockup(): Promise<StorageAsyncResult<CommentPro
         ],
     });
 }
+
+export async function getAllCommentsMockup(currentPage: number, maxItens: number): Promise<HttpAsyncResult<PaginatedCommentProxy>> {
+    const paginated = {
+      pageCount: 5,
+      currentPage,
+      items: [],
+      maxItens,
+    };
+  
+    for (let i = 0; i < maxItens; i++)
+      paginated.items.push(getFakeCommentProxy());
+  
+    return {
+      success: paginated,
+      error: undefined,
+    };
+  }

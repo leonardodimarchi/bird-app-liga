@@ -1,5 +1,7 @@
 .comments{
     padding: 0 1.6rem;
+    max-height: 100%;
+    overflow-y: auto;
 
     bird-comment-item{
         margin-bottom: 1.6rem;
