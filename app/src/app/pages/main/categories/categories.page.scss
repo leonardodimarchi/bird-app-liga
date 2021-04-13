@@ -1,0 +1,44 @@
+.categories{
+    padding: 2.4rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item{
+        width: calc(50% - 1.2rem);
+        margin-bottom: 2.4rem;
+
+        &:nth-child(2n){
+            margin-right: 2rem;
+        }
+
+        &:first-child{width: 100%;}
+
+        bird-category-item{
+            width: 100%;
+        }
+    }
+
+    &-add-item{
+        border: 2px dashed var(--bird-primary-dark);
+        border-radius: 25px;
+        padding: 1.6rem .5rem;
+        display:flex;
+        flex-direction: column;
+        height: 20rem;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+
+        ion-icon{
+            font-size: 5rem;
+        }
+
+        p{
+            font-size: 1.4rem;
+            color: var(--bird-primary);
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+}

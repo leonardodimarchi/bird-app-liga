@@ -26,3 +26,16 @@ export interface CategoryProxy{
      */
     comments?: CommentProxy[];
 }
+
+/**
+ * 
+ * @returns a fake category
+ */
+ export function getFakeCategoryProxy(): CategoryProxy{
+    return{
+        id: 1,
+        name: 'Typescript',
+        color: '#FFC542',
+        comments: [],
+    }
+}

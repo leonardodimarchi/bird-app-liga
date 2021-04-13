@@ -1,1 +1,16 @@
-Categories
+<div class="categories">
+    <ng-container *ngFor="let category of listCategories; let i=index; trackBy: trackById">
+        <div class="categories-item">
+            <ion-ripple-effect></ion-ripple-effect>
+            <bird-category-item class="category-bird-{{ i }}" [content]="category"></bird-category-item>
+        </div>
+    </ng-container>
+    
+    <div class="categories-item">
+        <div class="categories-add-item ion-activatable">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon src="assets/images/add_icon.svg"></ion-icon>
+            <p>Adicionar nova categoria</p>
+        </div>
+    </div>
+</div>
