@@ -12,6 +12,7 @@ import { registerLocaleData } from '@angular/common';
 
 import pt from '@angular/common/locales/pt';
 import { environment } from 'src/environments/environment';
+import { Drivers } from '@ionic/storage';
 
 registerLocaleData(pt);
 
@@ -25,7 +26,7 @@ registerLocaleData(pt);
     HttpClientModule,
     IonicStorageModule.forRoot({
       name: environment.config.dbName,
-      driverOrder: ['indexddb', 'localStorage'],
+      driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage],
     }),
   ],
   providers: [

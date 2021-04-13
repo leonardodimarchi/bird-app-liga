@@ -1,1 +1,6 @@
-All comments
+<div class="comments">
+    <!-- Tag de auxilio para colocar diretivas -->
+    <ng-container *ngFor="let comment of listAllComments; trackBy: trackById">
+        <bird-comment-item [content]="comment"></bird-comment-item>
+    </ng-container>
+</div>

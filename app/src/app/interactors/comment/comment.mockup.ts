@@ -3,8 +3,7 @@ import { StorageAsyncResult } from "src/app/models/interfaces/storage-async-resu
 import { CommentProxy, getFakeCommentProxy } from "src/app/models/proxies/comment.proxy"
 /* #endregion */
 
-
-export async function getMyCommentsMockup(): Promise<StorageAsyncResult<CommentProxy[]>>{
+export async function getCommentsMockup(): Promise<StorageAsyncResult<CommentProxy[]>>{
     return Promise.resolve({
         error: undefined,
         success: [

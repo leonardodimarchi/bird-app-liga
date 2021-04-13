@@ -29,6 +29,19 @@ export class CommentService {
     return success;
   }
 
+  public async getAllComments(): Promise<CommentProxy[]>{
+    const { error, success } = await this.interactor.getAllComments();
+    if(error){
+      return [];
+    }
+
+    if(!Array.isArray(success)){
+      return [];
+    }
+
+    return success;
+  }
+
   /* #endregion */
 }
 

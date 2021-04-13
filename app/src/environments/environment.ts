@@ -4,13 +4,14 @@
 
 export const environment = {
   production: false,
-  mockupEnabled: true,
+  mockupEnabled: false,
   config: {
     dbName: '__bird',
   },
 
   keys:{
     myComments: 'MY_COMMENTS_KEY',
+    allComments: 'ALL_COMMENTS_KEY',
   }
 };
 
