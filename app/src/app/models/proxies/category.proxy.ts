@@ -32,10 +32,16 @@ export interface CategoryProxy{
  * @returns a fake category
  */
  export function getFakeCategoryProxy(): CategoryProxy{
+    var randomNames: string[] = ['Typescript', 'Javascript', 'Java', 'Spring', 'C', 'Python']; 
+    var randomName: string = randomNames[Math.floor(Math.random() * randomNames.length)]
+    
+    var randomColors :string[] = ['#FF565E', '#3ED598', '#FFC542'];
+    var randomColor: string = randomColors[Math.floor(Math.random() * randomColors.length)]
+
     return{
         id: 1,
-        name: 'Typescript',
-        color: '#FFC542',
+        name: randomName,
+        color: randomColor,
         comments: [],
     }
 }
