@@ -14,5 +14,8 @@ export const environment = {
     comment: {
       list: '/comments?page={currentPage}&maxItens={maxItens}',
     },
+    categories: {
+      list:'/categories?page={currentPage}&maxItens={maxItens}',
+    }
   },
 };

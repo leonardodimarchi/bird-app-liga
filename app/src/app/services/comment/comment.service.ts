@@ -1,7 +1,7 @@
 /* #region  Imports */
 import { Injectable } from '@angular/core';
 import { CommentInteractor } from 'src/app/interactors/comment/comment.interactor';
-import { PaginatedCommentProxy } from 'src/app/models/interfaces/paginated-comment.proxy';
+import { PaginatedCommentProxy } from 'src/app/models/proxies/paginated-comment.proxy';
 import { CommentProxy } from '../../models/proxies/comment.proxy'
 /* #endregion */
 

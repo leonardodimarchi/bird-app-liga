@@ -1,11 +1,12 @@
+import { CategoryProxy } from './category.proxy';
 /* #region  Imports */
-import { CommentProxy } from "../proxies/comment.proxy";
+
 /* #endregion */
 
 /**
  * Classe para paginação de comentarios
  */
-export interface PaginatedCommentProxy {
+export interface PaginatedCategoryProxy {
     /**
      * O indice atual da paginação
      */
@@ -24,5 +25,5 @@ export interface PaginatedCommentProxy {
     /**
      * Os itens dessa páginação
      */
-    items: CommentProxy[];
+    items: CategoryProxy[];
 }

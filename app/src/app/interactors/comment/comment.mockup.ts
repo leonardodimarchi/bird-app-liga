@@ -1,6 +1,6 @@
 /* #region  Imports */
 import { HttpAsyncResult } from "src/app/models/interfaces/http-async-result";
-import { PaginatedCommentProxy } from "src/app/models/interfaces/paginated-comment.proxy";
+import { PaginatedCommentProxy } from "src/app/models/proxies/paginated-comment.proxy";
 import { StorageAsyncResult } from "src/app/models/interfaces/storage-async-results"
 import { CommentProxy, getFakeCommentProxy } from "src/app/models/proxies/comment.proxy"
 /* #endregion */

@@ -1,7 +1,7 @@
 /* #region  Imports */
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, Subscription } from 'rxjs';
-import { PaginatedCommentProxy } from 'src/app/models/interfaces/paginated-comment.proxy';
+import { PaginatedCommentProxy } from 'src/app/models/proxies/paginated-comment.proxy';
 import { CommentProxy } from 'src/app/models/proxies/comment.proxy';
 import { CommentService } from 'src/app/services/comment/comment.service';
 import { throttleTime, map } from 'rxjs/operators';

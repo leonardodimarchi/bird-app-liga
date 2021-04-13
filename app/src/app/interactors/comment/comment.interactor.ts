@@ -6,7 +6,7 @@ import { CommentProxy } from "src/app/models/proxies/comment.proxy";
 import { StorageAsyncResult } from "src/app/models/interfaces/storage-async-results";
 import { environment } from "src/environments/environment";
 import { getAllCommentsMockup, getCommentsMockup } from "./comment.mockup";
-import { PaginatedCommentProxy } from "src/app/models/interfaces/paginated-comment.proxy";
+import { PaginatedCommentProxy } from "src/app/models/proxies/paginated-comment.proxy";
 import { HttpAsyncResult } from "src/app/models/interfaces/http-async-result";
 /* #endregion */
 
