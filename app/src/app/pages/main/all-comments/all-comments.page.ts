@@ -5,6 +5,7 @@ import { PaginatedCommentProxy } from 'src/app/models/interfaces/paginated-comme
 import { CommentProxy } from 'src/app/models/proxies/comment.proxy';
 import { CommentService } from 'src/app/services/comment/comment.service';
 import { throttleTime, map } from 'rxjs/operators';
+import { TrackablePage } from 'src/app/common/trackable-page';
 /* #endregion */
 
 /* 
@@ -15,11 +16,14 @@ import { throttleTime, map } from 'rxjs/operators';
   templateUrl: './all-comments.page.html',
   styleUrls: ['./all-comments.page.scss'],
 })
-export class AllCommentsPage implements OnInit, OnDestroy {
+export class AllCommentsPage extends TrackablePage implements OnInit, OnDestroy {
 
   constructor(
     private readonly comment: CommentService,
   ) {
+    //Para a TrackablePage
+    super();
+
     this.currentScrollSubscription = this.currentScrollFrameSubject.pipe(
       throttleTime(16),
       map(currentDiv => {
@@ -80,17 +84,6 @@ export class AllCommentsPage implements OnInit, OnDestroy {
    */
   public onScroll(event: any): void {
     this.currentScrollFrameSubject.next(event.currentTarget);
-  }
-
-  /**
-   * Retorna o ID do item da lista para verificar se o item ja existe
-   * Caso exista, não deve fazer alterações no HTML
-   * 
-   * @param index o indice do item na lista
-   * @param value as informações do item
-   */
-  public trackById(index: number, value: CommentProxy): number {
-    return value.id;
   }
   /* #endregion */
 

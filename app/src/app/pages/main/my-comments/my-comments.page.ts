@@ -1,5 +1,6 @@
 /* #region  Imports */
 import { Component, OnInit } from '@angular/core';
+import { TrackablePage } from 'src/app/common/trackable-page';
 import { CommentProxy } from 'src/app/models/proxies/comment.proxy';
 import { CommentService } from 'src/app/services/comment/comment.service';
 /* #endregion */
@@ -12,7 +13,7 @@ import { CommentService } from 'src/app/services/comment/comment.service';
   templateUrl: './my-comments.page.html',
   styleUrls: ['./my-comments.page.scss'],
 })
-export class MyCommentsPage implements OnInit {
+export class MyCommentsPage extends TrackablePage implements OnInit {
 
   /* #region  Constructor */
   /* 
@@ -20,7 +21,9 @@ export class MyCommentsPage implements OnInit {
   */
   constructor(
     private readonly comment: CommentService,
-  ) { }
+  ) { 
+    super();
+  }
 
   /* #endregion */
 
@@ -36,20 +39,6 @@ export class MyCommentsPage implements OnInit {
   */
 
   public listComments: CommentProxy[] = [];
-
-  /* #endregion */
-
-  /* #region  Public Properties */
-  /**
-   * Retorna o ID do item da lista para verificar se o item ja existe
-   * Caso exista, não deve fazer alterações no HTML
-   * 
-   * @param index o indice do item na lista
-   * @param value as informações do item
-   */
-  public trackById(index: number, value: CommentProxy): number {
-    return value.id;
-  }
 
   /* #endregion */
 }
