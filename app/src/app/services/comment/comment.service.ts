@@ -1,6 +1,7 @@
 /* #region  Imports */
 import { Injectable } from '@angular/core';
 import { CommentInteractor } from 'src/app/interactors/comment/comment.interactor';
+import { CreateCommentPayload } from 'src/app/models/payloads/create-comment.payload';
 import { PaginatedCommentProxy } from 'src/app/models/proxies/paginated-comment.proxy';
 import { CommentProxy } from '../../models/proxies/comment.proxy'
 /* #endregion */
@@ -64,6 +65,21 @@ export class CommentService {
       }
   
       return success;
+    }
+
+    /**
+     * Metodo que cria um comentario com base no payload (Parametro)
+     * 
+     * @param payload As informações do comentario
+     */
+    public async createComment(payload:CreateCommentPayload): Promise<[boolean, string]>{ 
+      const { error } = await this.interactor.createComment(payload);
+
+      if(error){
+        return [false, 'Ocorreu um erro no envio do comentario !'];
+      }
+
+      return [true, 'Sucesso, seu comentário foi postado !'];
     }
 
   /* #endregion */

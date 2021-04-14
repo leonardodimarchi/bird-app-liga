@@ -71,4 +71,10 @@
         font-weight: bold;
         margin-right: .8rem;
     }
+
+    &[disabled]{
+        opacity: .5;
+        cursor: none;
+        pointer-events: none;
+    }
 }

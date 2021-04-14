@@ -5,27 +5,34 @@
         <p>Por favor, preencha os campos abaixo:</p>
     </div>
 
-    <form>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
         <div class="bird-input">
             <ion-icon name="person-outline"></ion-icon>
-            <input placeholder="Seu nome" type="text">
+            <input formControlName="personName" placeholder="Seu nome" type="text">
         </div>
 
         <div class="comment-avatar">
-            <ng-container *ngFor="let avatar of listAvatars" >
-              <div class="comment-avatar-item-container">
-                <div class="comment-avatar-item comment-avatar-item-selected ion-activatable"
-                    [style.background-color]="avatar.personColor">
+            <ng-container *ngFor="let avatar of listAvatars; let i = index" >
+
+              <div class="comment-avatar-item-container"
+                (click)="formGroup.controls.personAvatarIndex.setValue(i)">
+
+                <div class="comment-avatar-item ion-activatable"
+                    [style.background-color]="avatar.personColor"
+                    [class.comment-avatar-item-selected]="formGroup.controls.personAvatarIndex.value == i">
+
                     <ion-ripple-effect></ion-ripple-effect>
-                   <img [src]="avatar.personEmoji" alt="Imagem de avatar"/>
+                    <img [src]="avatar.personEmoji" alt="Imagem de avatar"/>
                </div>
+
               </div>
+
             </ng-container>
         </div>
 
         <div class="bird-input">
             <ion-icon name="chatbox-ellipses-outline"></ion-icon>
-            <textarea placeholder="Digite seu comentario" type="text"></textarea>
+            <textarea formControlName="message" placeholder="Digite seu comentario" type="text"></textarea>
         </div>
 
         <div class="comment-buttons">
@@ -34,7 +41,9 @@
                 <ion-icon src="assets/images/left-arrow.svg"></ion-icon>
             </button>        
             
-            <button class="bird-send-button ion-activatable">
+            <button class="bird-send-button ion-activatable" 
+                [disabled] = "formGroup.status != 'VALID' || isSendingForm"
+                type="submit">
                 <ion-ripple-effect></ion-ripple-effect>
                 <span>Criar</span>
                 <ion-icon src="assets/images/right-arrow-white.svg"></ion-icon>

@@ -1,7 +1,7 @@
 /* #region  Imports */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 /* #endregion */
@@ -15,7 +15,8 @@ import { CreateCommentPage } from './create-comment.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    CreateCommentPageRoutingModule
+    CreateCommentPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [
     CreateCommentPage

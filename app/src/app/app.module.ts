@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -28,6 +29,7 @@ registerLocaleData(pt);
       name: environment.config.dbName,
       driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage],
     }),
+    ReactiveFormsModule,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
