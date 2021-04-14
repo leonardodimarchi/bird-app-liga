@@ -4,7 +4,7 @@
     <ion-icon src="assets/images/left-arrow.svg"></ion-icon>
   </button>
 
-  <div class="bird-add-item ion-activatable">
+  <div [routerLink]="['/main/categories', categoryId, 'comment']" class="bird-add-item ion-activatable">
     <ion-ripple-effect></ion-ripple-effect>
     <ion-icon src="assets/images/add_icon.svg"></ion-icon>
     <p>Adicionar novo comentário</p>
