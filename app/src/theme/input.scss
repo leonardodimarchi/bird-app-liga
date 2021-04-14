@@ -1,0 +1,39 @@
+.bird-input{
+    position: relative;
+
+    input,textarea{
+        background: var(--bird-deep);
+        border-radius: 12px;
+        color: var(--bird-light);
+        font-size: 1.6rem;
+        font-weight: bold;
+    
+        padding: 1.6rem 1.6rem 1.6rem 4.5rem;
+        width: 100%;
+
+        border:none;
+        outline:none;
+
+        &::placeholder{
+            color: var(--bird-medium);
+            opacity: 1;
+            font-size: 1.4rem;
+        }
+    }
+
+    textarea{
+        font-size: 1.4rem;
+
+        resize: none;
+        min-height: 14rem;
+    }
+
+    ion-icon{
+        position: absolute;
+        top: 1.2rem;
+        left: 1.2rem;
+
+        font-size: 2.4rem;
+    }
+
+}
