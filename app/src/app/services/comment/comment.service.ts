@@ -44,6 +44,28 @@ export class CommentService {
     return success;
   }
 
+    /**
+   * Metodo que retorna uma lista de comentarios na categoria por ID
+   * 
+   * @param categoryId Id da categoria para busca
+   * @param currentPage Paginação atual
+   * @param maxItens Itens maximos
+   * @returns Uma lista de comentarios da categoria selecionada
+   */
+     public async getCategoryCommentsById(categoryId: number, currentPage: number, maxItens: number): Promise<PaginatedCommentProxy> {
+      const { error, success } = await this.interactor.getCategoryCommentsById(categoryId, currentPage, maxItens);
+      if (error) {
+        return {
+          pageCount: 1,
+          currentPage: 1,
+          items: [],
+          maxItens,
+        };
+      }
+  
+      return success;
+    }
+
   /* #endregion */
 }
 

@@ -21,3 +21,24 @@
         text-align: center;
     }
 }
+
+.bird--back-button {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+  
+    background-color: var(--bird-primary-dark);
+  
+    height: 6rem;
+    width: 6rem;
+  
+    outline: none;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    ion-icon {
+      font-size: 1.6rem;
+    }
+}

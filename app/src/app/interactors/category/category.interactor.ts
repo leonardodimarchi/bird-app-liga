@@ -18,7 +18,7 @@ export class CategoryInteractor {
         private readonly http: HttpClient,
     ) { }
 
-    /* #region  Storage Methods */
+    /* #region Storage Methods */
     public async getCategories(currentPage: number, maxItens: number): Promise<HttpAsyncResult<PaginatedCategoryProxy>> {
         if(environment.mockupEnabled){
             return await getCategoriesMockup(currentPage, maxItens);

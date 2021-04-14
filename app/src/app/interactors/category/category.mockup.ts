@@ -1,9 +1,8 @@
 /* #region  Imports */
 import { HttpAsyncResult } from "src/app/models/interfaces/http-async-result";
 import { PaginatedCategoryProxy } from './../../models/proxies/paginated-category-proxy';
-import { CategoryProxy } from './../../models/proxies/category.proxy';
 import { getFakeCategoryProxy } from 'src/app/models/proxies/category.proxy';
-import { StorageAsyncResult } from "src/app/models/interfaces/storage-async-results"
+
 
 /* #endregion */
 

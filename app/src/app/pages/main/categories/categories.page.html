@@ -10,7 +10,9 @@
     <ng-container *ngFor="let category of listCategories; let i=index; trackBy: trackById">
         <div class="categories-item">
             <ion-ripple-effect></ion-ripple-effect>
-            <bird-category-item class="category-bird-{{ i % 4}}" [content]="category"></bird-category-item>
+            <bird-category-item class="category-bird-{{ i % 4}}" 
+                [routerLink]="['/main/categories',category.id]"
+                [content]="category"></bird-category-item>
         </div>
     </ng-container>
 </div>
