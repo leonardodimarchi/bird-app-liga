@@ -1,6 +1,7 @@
-import { CategoryService } from './../../../services/category/category.service';
 /* #region  Imports */
 import { Component, OnDestroy, OnInit } from '@angular/core';
+
+import { CategoryService } from './../../../services/category/category.service';
 import { Subject, Subscription } from 'rxjs';
 import { throttleTime, map } from 'rxjs/operators';
 import { TrackablePage } from 'src/app/common/trackable-page';

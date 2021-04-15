@@ -22,6 +22,7 @@ export const environment = {
     },
     categories: {
       list:'/categories?page={currentPage}&maxItens={maxItens}',
+      create: '/categories',
     },
   },
 };

@@ -129,7 +129,7 @@ export class CreateCommentPage {
   private async showMessage(message: string): Promise<void> {
     const toast = await this.toast.create({
       message,
-      duration: 5_000,
+      duration: 3_000,
       position: 'middle',
     });
 

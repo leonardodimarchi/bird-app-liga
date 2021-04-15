@@ -74,6 +74,12 @@ export async function getCommentsByCategoryIdMockup(categoryId: number, currentP
   };
 }
 
+/**
+ * Metodo que retorna um mockup de comentario a partir de um payload
+ * 
+ * @param payload Informações do comentario
+ * @returns Um comentario falso
+ */
 export async function createCommentMockup(payload:CreateCommentPayload): Promise<HttpAsyncResult<CommentProxy>>{
   await new Promise(resolve => {
     setTimeout(resolve, 2_000);
