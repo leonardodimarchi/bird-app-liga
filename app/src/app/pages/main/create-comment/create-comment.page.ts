@@ -102,7 +102,9 @@ export class CreateCommentPage {
       personColor: this.listAvatars[personAvatarIndex].personColor,
     }
 
-    const loading = await this.loading.create();
+    const loading = await this.loading.create({
+      cssClass: 'bird-loading'
+    });
 
     loading.present();
     const [isSuccess, result] = await this.comment.createComment(payload);

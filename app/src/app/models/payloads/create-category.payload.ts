@@ -1,5 +1,5 @@
 /**
- * Interface para representar o Payload (o que sera enviado do APP para a API) da criação de comentarios
+ * Interface para representar o Payload (o que sera enviado do APP para a API) da criação de categorias
  */
  export interface CreateCategoryPayload {
     /**
