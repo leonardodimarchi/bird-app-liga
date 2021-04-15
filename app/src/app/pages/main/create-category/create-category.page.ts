@@ -111,7 +111,7 @@ export class CreateCategoryPage {
     const toast = await this.toast.create({
       message,
       duration: 3_000,
-      position: 'middle',
+      position: 'top',
     });
 
     await toast.present();
