@@ -3,6 +3,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { CategoryModule } from './modules/categories/category.module';
+import { CommentModule } from './modules/comments/comment.module';
 import { TypeOrmService } from './modules/typeorm/type-orm.service';
 /* #endregion */
 
@@ -16,6 +17,7 @@ import { TypeOrmService } from './modules/typeorm/type-orm.service';
       isGlobal: true,
     }),
     CategoryModule,
+    CommentModule,
   ],
 })
 export class AppModule { }
