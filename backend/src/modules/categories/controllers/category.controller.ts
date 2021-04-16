@@ -21,6 +21,7 @@ export class CategoryController {
 
     /* #region Public Methods */
     /**
+     * Método que retorna uma lista de categorias com paginação e possibilidade de pesquisa pelo nome da categoria
      * 
      * @param currentPage Pagina atual
      * @param maxItens Quantidade maxima de itens
