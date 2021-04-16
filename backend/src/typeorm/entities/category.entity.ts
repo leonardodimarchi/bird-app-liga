@@ -1,4 +1,3 @@
-import { ApiPropertyOptional } from '@nestjs/swagger';
 /* #region  Imports */
 import { ApiProperty } from "@nestjs/swagger";
 import { BaseEntity } from "src/common/base-entity";
@@ -33,7 +32,7 @@ export class CategoryEntity extends BaseEntity {
     /**
      * Lista de comentarios dessa categoria
      */
-    @ApiProperty({ type: () => CommentEntity })
+    @ApiProperty({ type: () => CommentEntity, isArray: true })
     @OneToMany( () => CommentEntity, comment => comment.categoryId)
     comments?: CommentEntity[];
 }
