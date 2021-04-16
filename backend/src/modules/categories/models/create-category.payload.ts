@@ -23,6 +23,7 @@ export class CreateCategoryPayload {
     @ApiProperty()
     @IsDefined({ message: 'É necessário enviar a cor dessa categoria.' })
     @IsString({ message: 'É necessário enviar um texto válido para a cor dessa categoria.' })
+    @MaxLength(7, { message: 'A cor da categoria não pode exceder 7 caracteres.' })
     @IsHexColor({ message: 'É necessário enviar um HEX válido para a cor dessa categoria.' })
     color: string;
 }
