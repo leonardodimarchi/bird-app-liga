@@ -24,3 +24,7 @@ The layout was designed in Figma and inspired by [Marvie](https://www.figma.com/
 ### 📓 Entities and Relationship
 
 Entity–relationship model was made with [Mermaid.js](https://mermaid-js.github.io/mermaid/) and you can found it [right here.](./entities.md)
+
+## 📃 License
+
+MIT License. [Open](LICENSE) .
