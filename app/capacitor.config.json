@@ -1,6 +1,6 @@
 {
   "appId": "com.liga.birdapp",
-  "appName": "app",
+  "appName": "Bird App",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
