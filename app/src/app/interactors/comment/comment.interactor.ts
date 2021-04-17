@@ -75,7 +75,7 @@ export class CommentInteractor {
         }
 
         const url = environment.api.comment.listByCategoryId
-            .replace('{categoryId', categoryId.toString())
+            .replace('{categoryId}', categoryId.toString())
             .replace('{currentPage}', currentPage.toString())
             .replace('{maxItens}', maxItens.toString());
 
