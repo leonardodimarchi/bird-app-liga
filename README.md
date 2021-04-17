@@ -27,4 +27,4 @@ Entity–relationship model was made with [Mermaid.js](https://mermaid-js.github
 
 ## 📃 License
 
-MIT License. [Open](LICENSE)
+[MIT License.](LICENSE)
