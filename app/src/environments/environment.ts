@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  mockupEnabled: true,
+  mockupEnabled: false,
   config: {
     dbName: '__bird',
   },
