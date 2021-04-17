@@ -2,12 +2,12 @@
   <div class="comment-header">
     <div class="comment-header-avatar"
       [style.background-color]="content.personColor">
-      <span>{{ content.personEmoji }}</span>
+      <ion-img [src]="content.personEmoji" alt="Avatar do usuario"></ion-img>
     </div>
 
     <div class="comment-header-author">
       <h2 class="bird-nowrap">{{ content.personName }}</h2>
-      <time>{{ content.createdAt | date:"dd MMMM 'as' HH:mm"}}</time>
+      <time>{{ content.createdAt | date:"dd 'de' MMMM 'as' HH:mm"}}</time>
     </div>
   </div>
 
