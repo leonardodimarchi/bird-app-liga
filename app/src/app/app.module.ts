@@ -2,7 +2,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { IonicStorageModule } from '@ionic/storage-angular';
@@ -14,6 +14,7 @@ import { registerLocaleData } from '@angular/common';
 import pt from '@angular/common/locales/pt';
 import { environment } from 'src/environments/environment';
 import { Drivers } from '@ionic/storage';
+import { BaseUrlInterceptor } from './interceptors/base-url.interceptor';
 
 registerLocaleData(pt);
 
@@ -33,7 +34,8 @@ registerLocaleData(pt);
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    { provide: LOCALE_ID, useValue: 'pt'}
+    { provide: LOCALE_ID, useValue: 'pt'},
+    { provide: HTTP_INTERCEPTORS, useClass: BaseUrlInterceptor, multi: true},
   ],
   bootstrap: [AppComponent],
 })
