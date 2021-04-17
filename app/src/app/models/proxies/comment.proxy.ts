@@ -60,7 +60,7 @@ export function getFakeCommentProxy(): CommentProxy{
         categoryId: 2,
         createdAt: new Date().toISOString(),
         personName: 'Leonardo De Marte',
-        personEmoji: '🐼',
+        personEmoji: './assets/images/avatar_2.png',
         personColor: '#FF565E',
         category: {
           id: 2,
