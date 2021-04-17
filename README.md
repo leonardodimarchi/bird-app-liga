@@ -5,7 +5,7 @@
 </div>
 
  
-## :gear Technologies
+## :gear: Technologies
 
 - [Angular](https://angular.io/docs)
 - [Ionic](https://ionicframework.com/docs)
