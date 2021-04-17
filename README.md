@@ -4,6 +4,11 @@
  <h4>Based on LIGA-Facens opportunity course. 🎮</h4>
 </div>
 
-
  
+## :gear Technologies
 
+- [Angular](https://angular.io/docs)
+- [Ionic](https://ionicframework.com/docs)
+- [NestJS](https://nestjs.com/)
+- [Capacitor](https://capacitorjs.com/docs)
+- [Node.js](https://nodejs.org/en/)
