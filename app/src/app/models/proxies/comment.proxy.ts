@@ -11,37 +11,37 @@ export interface CommentProxy {
      * Identificação desse comentario
      */
 
-    id: number;
+    id?: number;
 
     /**
      * A data de quando foi criado o comentario
      */
-    createdAt: string;
+    createdAt?: string;
 
     /**
      * Mensagem do comentario
      */
-    message: string
+    message?: string
 
     /**
      * Nome do autor
      */
-    personName: string; // 64
+    personName?: string; // 64
 
     /**
      * Emoji da pessoa (icone)
      */
-    personEmoji: string; // 64
+    personEmoji?: string; // 64
 
     /**
      * Cor de fundo do icone da pessoa
      */
-    personColor: string; // 7
+    personColor?: string; // 7
 
     /**
      * Identificação da categoria
      */
-    categoryId: number;
+    categoryId?: number;
 
     /**
      * As informações sobre a categoria
