@@ -9,17 +9,17 @@ export interface CategoryProxy{
     /**
      * Identificação da categoria
      */
-    id:number;
+    id?:number;
 
     /**
      * Nome da categoria
      */
-    name:string;
+    name?:string;
 
     /**
      * Cor da categoria
      */
-    color:string;
+    color?:string;
 
     /**
      * Lista de comentarios nessa categoria
