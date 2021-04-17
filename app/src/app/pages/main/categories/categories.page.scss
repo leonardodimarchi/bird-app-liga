@@ -1,0 +1,22 @@
+.categories{
+    padding: 2.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 100%;
+    overflow-y: auto;
+
+    &-item{
+        width: calc(50% - 1.2rem);
+        margin-bottom: 2.4rem;
+
+        &:nth-child(2n){
+            margin-right: 2rem;
+        }
+
+        &:first-child{width: 100%;}
+
+        bird-category-item{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<div class="categories" (scroll)="onScroll($event)">
+    <div class="categories-item">
+        <div class="bird-add-item ion-activatable"
+        routerLink="/main/categories/create">
+            <ion-ripple-effect></ion-ripple-effect>
+            <ion-icon src="assets/images/add_icon.svg"></ion-icon>
+            <p>Adicionar nova categoria</p>
+        </div>
+    </div>
+
+    <ng-container *ngFor="let category of listCategories; let i=index; trackBy: trackById">
+        <div class="categories-item">
+            <ion-ripple-effect></ion-ripple-effect>
+            <bird-category-item class="category-bird-{{ i % 4}}" 
+                [routerLink]="['/main/categories',category.id]"
+                [content]="category"></bird-category-item>
+        </div>
+    </ng-container>
+</div>

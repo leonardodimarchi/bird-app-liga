@@ -1,0 +1,36 @@
+@for $i from 0 through 3{
+    :host(.category-bird-#{ $i }){
+        ion-img.category-bird-image-#{$i}{
+           display:block; 
+        }
+    }
+}
+
+.category{
+    border-radius: 25px;
+    height: 20rem;
+    width: 100%;
+    padding: 2rem 2rem 0px 2rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    h3{
+        margin: 0;
+        max-width: 100%;
+        color: var(--bird-light);
+    }
+
+    ion-img {
+        display: none;
+        margin-top:auto;
+        height: 70%;
+    }
+
+    &-bird-image-0{
+        margin-left: auto;
+        height: 80%;
+        object-position: right;
+    }
+}

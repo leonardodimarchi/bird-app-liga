@@ -1,0 +1,31 @@
+.bird-header-create{
+   
+   &-detail{
+    width: 4.5rem;
+    height: 4.5rem;
+
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+
+    background: linear-gradient(180deg, #40DF9F 0%, #3ED598 100%);
+    box-shadow: 0px 2px 4px rgba(15, 218, 137, 0.3);
+    border-radius: 12px;
+   }
+
+   h1,p{
+    margin: 0;
+   }
+
+   h1{
+    font-weight: bold;
+    font-size: 3.5rem;
+    color: var(--bird-light);
+
+    margin-bottom: 1.6rem;
+   }
+
+   p{
+    font-size: 2.4rem;
+    color: var(--bird-medium);
+   }
+}

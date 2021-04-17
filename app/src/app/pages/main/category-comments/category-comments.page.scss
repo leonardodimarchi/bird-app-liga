@@ -1,0 +1,16 @@
+.comments {
+    padding: 0 2.4rem;
+    max-height: 100%;
+    overflow-y: auto;
+  
+    .bird-back-button {
+      margin-top: 2.4rem;
+      margin-bottom: 2.4rem;
+    }
+  
+    bird-comment-item {
+      margin-top: 2.4rem;
+      display: flex;
+      margin-bottom: 1.6rem;
+    }
+}

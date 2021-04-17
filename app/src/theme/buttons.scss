@@ -1,0 +1,80 @@
+.bird-add-item{
+    border: 2px dashed var(--bird-primary-dark);
+    border-radius: 25px;
+    padding: 1.6rem .5rem;
+    display:flex;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    ion-icon{
+        font-size: 5rem;
+        margin-right: 1rem
+    }
+
+    p{
+        font-size: 1.4rem;
+        color: var(--bird-primary);
+        font-weight: bold;
+        text-align: center;
+    }
+}
+
+.bird-back-button {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+  
+    background-color: var(--bird-primary-dark);
+  
+    height: 6rem;
+    width: 6rem;
+  
+    outline: none;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    ion-icon {
+      font-size: 1.6rem;
+    }
+}
+
+.bird-send-button{
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(180deg, #40DF9F 0%, #3ED598 100%);
+    box-shadow: 0px 2px 4px rgba(15, 218, 137, 0.3);
+    border-radius: 12px;
+
+    height: 6rem;
+    width: var(--send-button-width,100%);
+  
+    color: var(--bird-light);
+    
+    outline: none;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ion-icon {
+        font-size: 1.6rem;
+    }
+
+    span{
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-right: .8rem;
+    }
+
+    &[disabled]{
+        opacity: .5;
+        cursor: none;
+        pointer-events: none;
+    }
+}

@@ -1,0 +1,54 @@
+<div class="comment">
+    <div class="bird-header-create">
+        <div class="bird-header-create-detail"></div>
+        <h1>Criar Comentário</h1>
+        <p>Por favor, preencha os campos abaixo:</p>
+    </div>
+
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+        <div class="bird-input">
+            <ion-icon name="person-outline"></ion-icon>
+            <input formControlName="personName" placeholder="Seu nome" type="text">
+        </div>
+
+        <div class="comment-avatar">
+            <ng-container *ngFor="let avatar of listAvatars; let i = index" >
+
+              <div class="comment-avatar-item-container"
+                (click)="formGroup.controls.personAvatarIndex.setValue(i)">
+
+                <div class="comment-avatar-item ion-activatable"
+                    [style.background-color]="avatar.personColor"
+                    [class.comment-avatar-item-selected]="formGroup.controls.personAvatarIndex.value == i">
+
+                    <ion-ripple-effect></ion-ripple-effect>
+                    <img [src]="avatar.personEmoji" alt="Imagem de avatar"/>
+               </div>
+
+              </div>
+
+            </ng-container>
+        </div>
+
+        <div class="bird-input">
+            <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+            <textarea formControlName="message" placeholder="Digite seu comentario" type="text"></textarea>
+        </div>
+
+        <div class="comment-buttons">
+            <button [routerLink]="['/main/categories', categoryId]" class="bird-back-button ion-activatable">
+                <ion-ripple-effect></ion-ripple-effect>
+                <ion-icon src="assets/images/left-arrow.svg"></ion-icon>
+            </button>        
+            
+            <button class="bird-send-button ion-activatable" 
+                [disabled] = "formGroup.status != 'VALID' || isSendingForm"
+                type="submit">
+                <ion-ripple-effect></ion-ripple-effect>
+                <span>Criar</span>
+                <ion-icon src="assets/images/right-arrow-white.svg"></ion-icon>
+            </button>
+        </div>
+    </form>
+    
+</div>

@@ -24,3 +24,15 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@import "./theme/outline.scss";
+@import "./theme/typography.scss";
+@import "./theme/buttons.scss";
+@import "./theme/header.scss";
+@import "./theme/input.scss";
+@import "./theme/loading.scss";
+
+html {
+    font-size: 10px;
+}
+
