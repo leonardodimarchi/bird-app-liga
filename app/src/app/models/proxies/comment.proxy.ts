@@ -56,10 +56,10 @@ export interface CommentProxy {
 export function getFakeCommentProxy(): CommentProxy{
     return{
         id: 1,
-        message: 'This is a comment message This is a comment message This is a comment message This is a comment message',
+        message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae dolor enim. Duis eget bibendum nulla. Vestibulum in turpis enim. ',
         categoryId: 2,
         createdAt: new Date().toISOString(),
-        personName: 'Leonardo De Marte',
+        personName: 'Leonardo ',
         personEmoji: './assets/images/avatar_2.png',
         personColor: '#FF565E',
         category: {
